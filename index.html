@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bus Lagbe?</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LEFT HERO -->
+
+    <section class="hero">
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+
+            <img src="bd-logo.png"
+                 class="hero-logo"
+                 alt="Bangladesh Logo">
+
+            <h1>Bus Lagbe?</h1>
+
+            <p class="tagline">
+                Reserve your journey before leaving home.
+            </p>
+
+            <div class="features">
+
+                <div class="feature">
+                    <i data-lucide="check-circle"></i>
+                    <span>Compare bus fares instantly</span>
+                </div>
+
+                <div class="feature">
+                    <i data-lucide="shield-check"></i>
+                    <span>Secure digital payments</span>
+                </div>
+
+                <div class="feature">
+                    <i data-lucide="ticket"></i>
+                    <span>Download tickets anytime</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RIGHT PANEL -->
+
+    <section class="login-section">
+
+        <div class="login-card">
+
+            <!-- LOGIN FORM -->
+
+            <div id="loginForm">
+
+                <h2>Welcome Back</h2>
+
+                <p class="subtitle">
+                    Login to continue your journey.
+                </p>
+
+                <form>
+
+                    <div class="input-group">
+
+                        <label>Phone Number</label>
+
+                        <input
+                            type="tel"
+                            placeholder="+880 1XXXXXXXXX"
+                            required>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Password</label>
+
+                        <input
+                            type="password"
+                            placeholder="Enter Password"
+                            required>
+
+                    </div>
+
+                    <button class="primary-btn" type="submit">
+                        Login
+                    </button>
+
+                </form>
+
+                <a href="#" class="forgot">
+                    Forgot Password?
+                </a>
+
+                <div class="divider">
+                    <span>OR</span>
+                </div>
+
+                <button
+                    class="secondary-btn"
+                    id="showSignup">
+
+                    Create Account
+
+                </button>
+
+            </div>
+
+
+
+            <!-- SIGNUP FORM -->
+
+            <div id="signupForm" class="hidden">
+
+                <h2>Create Account</h2>
+
+                <p class="subtitle">
+                    Join Bus Lagbe today.
+                </p>
+
+                <form>
+
+                    <div class="input-group">
+
+                        <label>Phone Number</label>
+
+                        <input
+                            type="tel"
+                            placeholder="+880 1XXXXXXXXX"
+                            required>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>OTP</label>
+
+                        <input
+                            type="text"
+                            placeholder="Enter OTP">
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Password</label>
+
+                        <input
+                            type="password"
+                            placeholder="Create Password">
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Confirm Password</label>
+
+                        <input
+                            type="password"
+                            placeholder="Confirm Password">
+
+                    </div>
+
+                    <button class="primary-btn">
+
+                        Create Account
+
+                    </button>
+
+                </form>
+
+                <div class="divider">
+                    <span>Already have an account?</span>
+                </div>
+
+                <button
+                    class="secondary-btn"
+                    id="showLogin">
+
+                    Login Instead
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<footer>
+
+    <div class="footer-left">
+
+        Developed by <strong>Najah Sadmim</strong>
+
+    </div>
+
+    <div class="footer-center">
+
+        BRAC University
+
+    </div>
+
+    <div class="footer-right">
+
+        <a href="https://github.com/najahsadmim">GitHub</a>
+
+        <a href="https://www.linkedin.com/in/najahsadmim/">LinkedIn</a>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+    lucide.createIcons();
+
+</script>
+
+<script src="js/login.js"></script>
+
+</body>
+</html>
+
