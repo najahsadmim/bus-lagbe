@@ -1,0 +1,173 @@
+
+/* ===========================================
+   BUS LAGBE
+   GLOBAL STYLESHEET
+=========================================== */
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ROOT COLORS */
+
+:root{
+
+    --primary:#006A4E;
+    --primary-dark:#00543E;
+
+    --accent:#F42A41;
+
+    --background:#F8FAFC;
+
+    --white:#FFFFFF;
+
+    --black:#1F2937;
+
+    --gray:#6B7280;
+
+    --border:#E5E7EB;
+
+    --shadow:0 15px 40px rgba(0,0,0,.08);
+
+    --radius:18px;
+
+    --transition:.30s ease;
+
+}
+
+/* BODY */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:var(--background);
+
+    color:var(--black);
+
+    overflow-x:hidden;
+
+}
+
+/* HEADINGS */
+
+h1,h2,h3,h4,h5{
+
+    font-family:'Poppins',sans-serif;
+
+    font-weight:700;
+
+}
+
+/* LINKS */
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+/* BUTTONS */
+
+button{
+
+    font-family:'Inter',sans-serif;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+/* INPUTS */
+
+input,
+select,
+textarea{
+
+    font-family:'Inter',sans-serif;
+
+}
+
+/* IMAGES */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/* LISTS */
+
+ul{
+
+    list-style:none;
+
+}
+
+/* UTILITIES */
+
+.hidden{
+
+    display:none !important;
+
+}
+
+.center{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.text-center{
+
+    text-align:center;
+
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#EDF2F7;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary-dark);
+
+}
+
