@@ -212,7 +212,7 @@ function saveConfirmedReservation() {
 
     localStorage.setItem(
         "busLagbeReservations",
-        JSON.stringify(reservations)
+        JSON.stringify(confirmedReservations)
     );
 
     if (
@@ -221,14 +221,14 @@ function saveConfirmedReservation() {
     ) {
         addBusLagbeNotification(
             "Reservation confirmed",
-            `${ticket.operator} from ${ticket.pickup} to ${ticket.destination} has been reserved successfully.`,
+            `${confirmedReservation.operator} from ${confirmedReservation.pickup} to ${confirmedReservation.destination} has been reserved successfully.`,
             "ticket",
             "ticket.html"
         );
-    
+
         addBusLagbeNotification(
             "Payment successful",
-            `Your payment of ৳${ticket.totalFare} was completed successfully.`,
+            `Your payment of ৳${confirmedReservation.totalFare} was completed successfully.`,
             "payment",
             "ticket.html"
         );
@@ -241,7 +241,9 @@ function saveConfirmedReservation() {
 
     addBookingNotification(confirmedReservation);
 
-    sessionStorage.removeItem("busLagbePendingReservation");
+    sessionStorage.removeItem(
+        "busLagbePendingReservation"
+    );
 
     return confirmedReservation;
 }
