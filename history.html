@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Reservation History | Bus Lagbe?</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="history.css">
+
+</head>
+
+<body>
+
+<header class="main-header">
+
+    <div class="header-container">
+
+        <a href="home.html" class="brand">
+
+            <img
+                src="bd-logo.png"
+                class="brand-logo"
+                alt="Bangladesh Logo"
+            >
+
+            <span>Bus Lagbe?</span>
+
+        </a>
+
+
+        <nav class="desktop-nav">
+
+            <a href="home.html">Home</a>
+
+            <a href="booking.html">Book</a>
+
+            <a href="tickets.html">My Tickets</a>
+
+        </nav>
+
+
+        <div class="header-actions">
+
+            <button
+                class="header-icon-btn"
+                id="languageButton"
+                type="button"
+            >
+
+                <i data-lucide="languages"></i>
+
+            </button>
+
+
+            <div class="notification-wrapper">
+
+                <button
+                    class="header-icon-btn"
+                    id="notificationButton"
+                    type="button"
+                >
+
+                    <i data-lucide="bell"></i>
+
+                    <span
+                        class="notification-badge hidden"
+                        id="notificationBadge"
+                    >
+                        0
+                    </span>
+
+                </button>
+
+
+                <div
+                    class="notification-panel"
+                    id="notificationPanel"
+                >
+
+                    <div class="notification-header">
+
+                        <div>
+
+                            <span>UPDATES</span>
+
+                            <h3>Notifications</h3>
+
+                        </div>
+
+                        <button
+                            id="markAllReadButton"
+                            type="button"
+                        >
+                            Mark all read
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        class="notification-list"
+                        id="notificationList"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-wrapper">
+
+                <button
+                    class="profile-button"
+                    id="profileButton"
+                    type="button"
+                >
+
+                    <img
+                        id="headerProfileImage"
+                        class="hidden"
+                        alt="Profile"
+                    >
+
+                    <i
+                        data-lucide="user"
+                        id="headerProfileIcon"
+                    ></i>
+
+                </button>
+
+
+                <div
+                    class="profile-menu"
+                    id="profileMenu"
+                >
+
+                    <div class="profile-menu-user">
+
+                        <strong id="profileMenuName">
+                            Passenger
+                        </strong>
+
+                        <span id="profileMenuIdentity">
+                            Bus Lagbe Account
+                        </span>
+
+                    </div>
+
+                    <div class="menu-divider"></div>
+
+                    <a href="profile.html">
+
+                        <i data-lucide="circle-user-round"></i>
+
+                        My Profile
+
+                    </a>
+
+                    <a href="tickets.html">
+
+                        <i data-lucide="ticket"></i>
+
+                        My Tickets
+
+                    </a>
+
+                    <a
+                        href="history.html"
+                        class="active-menu-item"
+                    >
+
+                        <i data-lucide="history"></i>
+
+                        Reservation History
+
+                    </a>
+
+                    <div class="menu-divider"></div>
+
+                    <button
+                        id="logoutButton"
+                        class="logout-button"
+                        type="button"
+                    >
+
+                        <i data-lucide="log-out"></i>
+
+                        Logout
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <section class="history-hero">
+
+        <div class="hero-pattern"></div>
+
+        <div class="page-container hero-content">
+
+            <span class="hero-label">
+                JOURNEY RECORD
+            </span>
+
+            <h1>
+                Reservation history.
+            </h1>
+
+            <p>
+                A complete record of your journeys
+                and seat reservations.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="history-section">
+
+        <div class="page-container">
+
+            <div class="history-summary">
+
+                <div class="summary-card">
+
+                    <div class="summary-icon">
+
+                        <i data-lucide="ticket-check"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>Total Reservations</span>
+
+                        <strong id="totalReservations">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-icon">
+
+                        <i data-lucide="armchair"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>Seats Reserved</span>
+
+                        <strong id="totalSeats">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-icon">
+
+                        <i data-lucide="wallet-cards"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>Total Spent</span>
+
+                        <strong>
+                            ৳<span id="totalSpent">0</span>
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="history-card">
+
+                <div class="history-card-header">
+
+                    <div>
+
+                        <span>RESERVATIONS</span>
+
+                        <h2>
+                            Journey activity
+                        </h2>
+
+                    </div>
+
+
+                    <div class="history-search">
+
+                        <i data-lucide="search"></i>
+
+                        <input
+                            type="search"
+                            id="historySearch"
+                            placeholder="Search reservation..."
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="history-table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>RESERVATION</th>
+
+                                <th>OPERATOR</th>
+
+                                <th>ROUTE</th>
+
+                                <th>SEATS</th>
+
+                                <th>PAID</th>
+
+                                <th>BOOKED</th>
+
+                                <th></th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="historyTableBody"></tbody>
+
+                    </table>
+
+                </div>
+
+
+                <div
+                    class="history-empty hidden"
+                    id="historyEmpty"
+                >
+
+                    <div>
+
+                        <i data-lucide="history"></i>
+
+                    </div>
+
+                    <h3>
+                        No reservation history yet.
+                    </h3>
+
+                    <p>
+                        Your completed reservations will
+                        appear here.
+                    </p>
+
+                    <a href="booking.html">
+                        Reserve a Seat
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-container">
+
+        <div>
+
+            Developed by
+
+            <strong>
+                Najah Sadmim
+            </strong>
+
+        </div>
+
+        <div>
+            BRAC University
+        </div>
+
+        <div class="footer-links">
+
+            <a
+                href="https://github.com/najahsadmim"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GitHub
+            </a>
+
+            <a
+                href="https://www.linkedin.com/in/najahsadmim/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                LinkedIn
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="notifications.js"></script>
+
+<script src="history.js"></script>
+
+</body>
+
+</html>
