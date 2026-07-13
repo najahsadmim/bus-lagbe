@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Ticket | Bus Lagbe?</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="ticket.css">
+
+</head>
+
+<body>
+
+    <header class="main-header">
+
+        <div class="header-container">
+
+            <a
+                href="home.html"
+                class="brand"
+            >
+
+                <img
+                    src="bd-logo.png"
+                    alt="Bangladesh Logo"
+                    class="brand-logo"
+                >
+
+                <span class="brand-name">
+                    Bus Lagbe?
+                </span>
+
+            </a>
+
+
+            <div class="header-actions">
+
+                <a
+                    href="booking.html"
+                    class="header-book-btn"
+                >
+
+                    <i data-lucide="plus"></i>
+
+                    <span>
+                        New Booking
+                    </span>
+
+                </a>
+
+
+                <button
+                    class="header-icon-btn"
+                    id="languageButton"
+                    type="button"
+                    aria-label="Change language"
+                >
+
+                    <i data-lucide="languages"></i>
+
+                </button>
+
+
+                <div class="header-menu-wrapper">
+
+                    <button
+                        class="profile-button"
+                        id="profileButton"
+                        type="button"
+                        aria-label="Profile"
+                    >
+
+                        <img
+                            id="headerProfileImage"
+                            class="header-profile-image hidden"
+                            alt="Profile"
+                        >
+
+                        <i
+                            data-lucide="user"
+                            id="headerProfileIcon"
+                        ></i>
+
+                    </button>
+
+
+                    <div
+                        class="header-dropdown profile-dropdown"
+                        id="profileMenu"
+                    >
+
+                        <div class="profile-menu-user">
+
+                            <div class="profile-menu-avatar">
+
+                                <img
+                                    id="profileMenuImage"
+                                    class="hidden"
+                                    alt="Profile"
+                                >
+
+                                <i
+                                    data-lucide="user"
+                                    id="profileMenuIcon"
+                                ></i>
+
+                            </div>
+
+                            <div>
+
+                                <strong id="profileMenuName">
+                                    Passenger
+                                </strong>
+
+                                <span id="profileMenuIdentity">
+                                    Bus Lagbe Account
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="dropdown-divider"></div>
+
+
+                        <a href="profile.html">
+
+                            <i data-lucide="circle-user-round"></i>
+
+                            My Profile
+
+                        </a>
+
+
+                        <a href="tickets.html">
+
+                            <i data-lucide="ticket"></i>
+
+                            My Tickets
+
+                        </a>
+
+
+                        <a href="history.html">
+
+                            <i data-lucide="history"></i>
+
+                            Reservation History
+
+                        </a>
+
+
+                        <div class="dropdown-divider"></div>
+
+
+                        <button
+                            class="logout-option"
+                            id="logoutButton"
+                            type="button"
+                        >
+
+                            <i data-lucide="log-out"></i>
+
+                            Logout
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main class="ticket-main">
+
+        <section class="ticket-heading-section">
+
+            <div class="ticket-heading-pattern"></div>
+
+            <div class="ticket-container ticket-heading-content">
+
+                <div class="ticket-eyebrow">
+
+                    <span></span>
+
+                    RESERVATION CONFIRMED
+
+                </div>
+
+                <h1>
+                    Your ticket is ready.
+                </h1>
+
+                <p>
+                    Keep your ticket with you and present it
+                    before boarding your bus.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="ticket-content-section">
+
+            <div class="ticket-container">
+
+                <div class="ticket-page-layout">
+
+                    <div class="ticket-wrapper">
+
+                        <article
+                            class="digital-ticket"
+                            id="digitalTicket"
+                        >
+
+                            <div class="ticket-main-section">
+
+                                <div class="ticket-brand-row">
+
+                                    <div class="ticket-brand">
+
+                                        <img
+                                            src="bd-logo.png"
+                                            alt="Bangladesh Logo"
+                                        >
+
+                                        <div>
+
+                                            <strong>
+                                                Bus Lagbe?
+                                            </strong>
+
+                                            <span>
+                                                DIGITAL BUS TICKET
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="ticket-status">
+
+                                        <span></span>
+
+                                        CONFIRMED
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="ticket-reference-row">
+
+                                    <div>
+
+                                        <span>
+                                            Reservation ID
+                                        </span>
+
+                                        <strong id="ticketReservationId">
+                                            —
+                                        </strong>
+
+                                    </div>
+
+
+                                    <div class="ticket-payment-status">
+
+                                        <i data-lucide="shield-check"></i>
+
+                                        <div>
+
+                                            <span>
+                                                Payment
+                                            </span>
+
+                                            <strong>
+                                                PAID
+                                            </strong>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="ticket-bus-information">
+
+                                    <div class="ticket-bus-icon">
+
+                                        <i data-lucide="bus-front"></i>
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <span>
+                                            BUS OPERATOR
+                                        </span>
+
+                                        <h2 id="ticketBusOperator">
+                                            Bus Operator
+                                        </h2>
+
+                                        <p id="ticketBusRegistration">
+                                            Registration
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="ticket-route">
+
+                                    <div class="ticket-route-location">
+
+                                        <span>
+                                            PICKUP
+                                        </span>
+
+                                        <strong id="ticketPickup">
+                                            —
+                                        </strong>
+
+                                        <small id="ticketPickupTime">
+                                            —
+                                        </small>
+
+                                    </div>
+
+
+                                    <div class="ticket-route-track">
+
+                                        <span class="ticket-route-point"></span>
+
+                                        <div>
+
+                                            <i data-lucide="bus-front"></i>
+
+                                        </div>
+
+                                        <span
+                                            class="ticket-route-point
+                                            ticket-destination-point"
+                                        ></span>
+
+                                    </div>
+
+
+                                    <div
+                                        class="ticket-route-location
+                                        ticket-destination"
+                                    >
+
+                                        <span>
+                                            DESTINATION
+                                        </span>
+
+                                        <strong id="ticketDestination">
+                                            —
+                                        </strong>
+
+                                        <small id="ticketDestinationTime">
+                                            —
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="ticket-details-grid">
+
+                                    <div>
+
+                                        <span>
+                                            PAYMENT METHOD
+                                        </span>
+
+                                        <strong id="ticketPaymentMethod">
+                                            —
+                                        </strong>
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <span>
+                                            TOTAL PAID
+                                        </span>
+
+                                        <strong>
+                                            ৳
+                                            <span id="ticketTotalPaid">
+                                                0
+                                            </span>
+                                        </strong>
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <span>
+                                            BOOKED ON
+                                        </span>
+
+                                        <strong id="ticketBookedDate">
+                                            —
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="ticket-note">
+
+                                    <i data-lucide="info"></i>
+
+                                    <p>
+
+                                        This ticket covers all seats
+                                        reserved under this booking.
+                                        Only one ticket is required
+                                        for this reservation.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="ticket-divider">
+
+                                <span></span>
+
+                                <div></div>
+
+                                <span></span>
+
+                            </div>
+
+
+                            <div class="ticket-seat-section">
+
+                                <span class="ticket-seat-label">
+                                    RESERVED SEATS
+                                </span>
+
+                                <strong id="ticketSeatCount">
+                                    01
+                                </strong>
+
+                                <span class="ticket-seat-word">
+                                    SEATS
+                                </span>
+
+
+                                <div class="ticket-seat-divider"></div>
+
+
+                                <div class="ticket-seat-meta">
+
+                                    <span>
+                                        FARE PER SEAT
+                                    </span>
+
+                                    <strong>
+                                        ৳
+                                        <span id="ticketFarePerSeat">
+                                            0
+                                        </span>
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="ticket-validity">
+
+                                    <i data-lucide="badge-check"></i>
+
+                                    VALID TICKET
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <aside class="ticket-actions-card">
+
+                        <div class="ticket-actions-icon">
+
+                            <i data-lucide="ticket-check"></i>
+
+                        </div>
+
+
+                        <span class="ticket-actions-label">
+                            YOUR JOURNEY
+                        </span>
+
+                        <h2>
+                            Ready when you are.
+                        </h2>
+
+                        <p>
+
+                            Download your ticket for offline access
+                            or print a physical copy before your trip.
+
+                        </p>
+
+
+                        <button
+                            class="download-ticket-button"
+                            id="downloadTicketButton"
+                            type="button"
+                        >
+
+                            <i data-lucide="download"></i>
+
+                            <span>
+                                Download Ticket
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            class="print-ticket-button"
+                            id="printTicketButton"
+                            type="button"
+                        >
+
+                            <i data-lucide="printer"></i>
+
+                            <span>
+                                Print Ticket
+                            </span>
+
+                        </button>
+
+
+                        <div class="ticket-action-divider"></div>
+
+
+                        <a
+                            href="tickets.html"
+                            class="all-tickets-link"
+                        >
+
+                            <span>
+                                View all my tickets
+                            </span>
+
+                            <i data-lucide="arrow-right"></i>
+
+                        </a>
+
+
+                        <div
+                            class="download-status hidden"
+                            id="downloadStatus"
+                        >
+
+                            <i data-lucide="check-circle-2"></i>
+
+                            Ticket downloaded successfully.
+
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="ticket-footer">
+
+        <div class="ticket-footer-container">
+
+            <div>
+
+                <strong>
+                    Bus Lagbe?
+                </strong>
+
+                <span>
+                    Built for simpler journeys across Bangladesh.
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Developed by
+                </span>
+
+                <strong>
+                    Najah Sadmim
+                </strong>
+
+            </div>
+
+
+            <div class="ticket-footer-links">
+
+                <a
+                    href="https://github.com/najahsadmim"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <i data-lucide="github"></i>
+
+                    GitHub
+
+                </a>
+
+
+                <a
+                    href="https://www.linkedin.com/in/najahsadmim/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <i data-lucide="linkedin"></i>
+
+                    LinkedIn
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="ticket.js"></script>
+
+</body>
+
+</html>
