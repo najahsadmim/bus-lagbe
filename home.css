@@ -148,7 +148,7 @@ a {
     position: relative;
 }
 
-.notification-dot {
+/* .notification-dot {
     position: absolute;
 
     top: 9px;
@@ -162,7 +162,7 @@ a {
     background: var(--accent);
 
     border: 2px solid white;
-}
+} */
 
 .profile-button {
     background: var(--primary);
