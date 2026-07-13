@@ -1,0 +1,13 @@
+Bus Operator,Category,Registration No.,Primary Pickup,Major Stops,Final Drop-off,Departure Time,Arrival Time,Total Seats,Available Seats,Fare
+Victor Classic,Local / Counter,DHAKA METRO-BA-XYZ,Sadarghat,"Gulistan, Rampura, Badda, Kuril Biswaroad, Airport, Uttara",Abdullahpur,07:00 AM,08:30 AM,40,7,45
+Turag Paribahan,Local / Counter,DHAKA METRO-CHA-XYZ,Jatrabari,"Sayedabad, Mugda, Khilgaon, Rampura, Badda, Kuril, Airport",Abdullahpur,08:15 AM,09:45 AM,30,23,50
+Butterfly Paribahan,Local / Counter,DHAKA METRO-GA-XYZ,Mohammadpur,"Asad Gate, Shyamoli, Technical, Mirpur 1, Mirpur 10",Mirpur 14,09:00 AM,10:40 AM,34,15,30
+Raja City,Local / Counter,DHAKA METRO-HA-XYZ,Motijheel,"Gulistan, Shahbagh, Science Lab, Jigatola, Shankar",Mohammadpur,10:30 AM,12:15 PM,33,8,25
+Anik Bus,Local / Counter,DHAKA METRO-TA-XYZ,Azimpur,"Panthapath, Kawran Bazar, Mohakhali, Kakoli, Airport, Uttara",Tongi (Hossain Market),12:00 PM,01:45 PM,31,5,45
+Falgun,Local / Counter,DHAKA METRO-BA-XYZ,Azimpur,"Shahbagh, Kakrail, Malibagh, Mouchak, Rampura, Badda, Kuril",Uttara (House Building),02:15 PM,04:00 PM,39,27,45
+BRTC (Non-AC Route A),Government (BRTC),DHAKA METRO-CHA-XYZ,Motijheel,"Shahbagh, Farmgate, Banani, Airport, Uttara",Abdullahpur,04:30 PM,06:15 PM,30,0,60
+BRTC (Non-AC Route B),Government (BRTC),DHAKA METRO-GA-XYZ,Mirpur 12,"Mirpur 10, Agargaon, Farmgate, Shahbagh, Gulistan",Motijheel,05:45 PM,07:30 PM,31,13,60
+BRTC (AC Services),Government (BRTC),DHAKA METRO-HA-XYZ,Motijheel,"Expressways, Banani, Airport, Uttara",Abdullahpur,07:00 PM,08:45 PM,33,32,80
+Dhaka Chaka,Premium / AC Shuttle,DHAKA METRO-TA-XYZ,Kakoli,"Banani Railgate, Gulshan 1, Gulshan 2",Natun Bazar,08:15 PM,10:00 PM,28,19,30
+Omama Premium,Premium / AC Shuttle,DHAKA METRO-BA-XYZ,Motijheel,"Flyovers, Banani, Airport",Uttara,09:30 PM,11:15 PM,28,0,100
+Shohag Paribahan (Inter-City),Inter-District Coach,DHAKA METRO-CHA-XYZ,Malibagh,Direct Highway (No Local Stops),Cox's Bazar,09:15 PM,06:30 AM,38,12,2500
