@@ -81,20 +81,60 @@
 
             </button>
 
+<div class="notification-wrapper">
+
+    <button
+        class="header-icon-btn"
+        id="notificationButton"
+        type="button"
+        aria-label="Notifications"
+    >
+
+        <i data-lucide="bell"></i>
+
+        <span
+            class="notification-badge hidden"
+            id="notificationBadge"
+        >
+            0
+        </span>
+
+    </button>
+
+
+    <div
+        class="notification-panel"
+        id="notificationPanel"
+    >
+
+        <div class="notification-header">
+
+            <div>
+
+                <span>UPDATES</span>
+
+                <h3>Notifications</h3>
+
+            </div>
 
             <button
-                class="header-icon-btn notification-button"
-                id="notificationButton"
+                id="markAllReadButton"
                 type="button"
-                aria-label="Notifications"
             >
-
-                <i data-lucide="bell"></i>
-
-                <span class="notification-dot"></span>
-
+                Mark all read
             </button>
 
+        </div>
+
+
+        <div
+            class="notification-list"
+            id="notificationList"
+        ></div>
+
+    </div>
+
+</div>
 
             <div class="header-menu-wrapper">
 
@@ -155,17 +195,17 @@
                     id="profileMenu"
                 >
 
-                    <a href="#">
+                    <a href="profile.html">
                         <i data-lucide="user-round"></i>
                         My Profile
                     </a>
 
-                    <a href="#">
+                    <a href="tickets.html">
                         <i data-lucide="ticket"></i>
                         My Tickets
                     </a>
 
-                    <a href="#">
+                    <a href="history.html">
                         <i data-lucide="history"></i>
                         Reservation History
                     </a>
