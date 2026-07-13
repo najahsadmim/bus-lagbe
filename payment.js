@@ -211,11 +211,11 @@ function saveConfirmedReservation() {
     }
 
     localStorage.setItem(
-        "busLagbeReservations",
-        JSON.stringify(confirmedReservations)
-    );
+    "busLagbeReservations",
+    JSON.stringify(reservations)
+);
 
-    if (
+if (
     typeof addBusLagbeNotification ===
     "function"
 ) {
