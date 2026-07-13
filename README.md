@@ -1,4 +1,4 @@
-<img width="883" height="872" alt="image" src="https://github.com/user-attachments/assets/4b175d52-5ae5-4765-adbd-bbb706490b9e" /># 🚌 Bus Lagbe?
+# 🚌 Bus Lagbe?
 
 > **Your seat. Your route. Reserved before you leave.**
 
