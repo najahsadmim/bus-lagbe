@@ -259,3 +259,40 @@ window.addEventListener("beforeunload", () => {
         cancelAnimationFrame(routeAnimationFrame);
     }
 });
+
+const homeProfileButton = document.getElementById(
+    "profileButton"
+);
+
+const homeProfileMenu = document.getElementById(
+    "profileMenu"
+);
+
+if (homeProfileButton && homeProfileMenu) {
+    homeProfileButton.addEventListener(
+        "click",
+        event => {
+            event.stopPropagation();
+
+            homeProfileMenu.classList.toggle(
+                "show"
+            );
+        }
+    );
+
+    homeProfileMenu.addEventListener(
+        "click",
+        event => {
+            event.stopPropagation();
+        }
+    );
+
+    document.addEventListener(
+        "click",
+        () => {
+            homeProfileMenu.classList.remove(
+                "show"
+            );
+        }
+    );
+}
