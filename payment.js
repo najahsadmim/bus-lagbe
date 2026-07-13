@@ -215,6 +215,25 @@ function saveConfirmedReservation() {
         JSON.stringify(confirmedReservations)
     );
 
+    if (
+    typeof addBusLagbeNotification ===
+    "function"
+) {
+    addBusLagbeNotification(
+        "Reservation confirmed",
+        `${ticket.operator} from ${ticket.pickup} to ${ticket.destination} has been reserved successfully.`,
+        "ticket",
+        "ticket.html"
+    );
+
+    addBusLagbeNotification(
+        "Payment successful",
+        `Your payment of ৳${ticket.totalFare} was completed successfully.`,
+        "payment",
+        "ticket.html"
+    );
+}
+
     localStorage.setItem(
         "busLagbeLatestTicket",
         JSON.stringify(confirmedReservation)
