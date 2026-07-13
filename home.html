@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Bus Lagbe? | Reserve Your Journey</title>
+
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="home.css">
+
+</head>
+
+
+<body>
+
+
+<header class="main-header">
+
+    <div class="header-container">
+
+
+        <a
+            href="home.html"
+            class="brand"
+        >
+
+            <img
+                src="bd-logo.png"
+                class="brand-logo"
+                alt="Bus Lagbe Bangladesh Logo"
+            >
+
+            <span class="brand-name">
+                Bus Lagbe?
+            </span>
+
+        </a>
+
+
+        <div class="header-actions">
+
+
+            <button
+                class="header-book-btn"
+                id="headerBookButton"
+                type="button"
+            >
+
+                Book Now
+
+                <i data-lucide="arrow-right"></i>
+
+            </button>
+
+
+            <button
+                class="header-icon-btn notification-button"
+                id="notificationButton"
+                type="button"
+                aria-label="Notifications"
+            >
+
+                <i data-lucide="bell"></i>
+
+                <span class="notification-dot"></span>
+
+            </button>
+
+
+            <div class="header-menu-wrapper">
+
+                <button
+                    class="header-icon-btn"
+                    id="languageButton"
+                    type="button"
+                    aria-label="Change Language"
+                >
+
+                    <i data-lucide="languages"></i>
+
+                </button>
+
+
+                <div
+                    class="header-dropdown"
+                    id="languageMenu"
+                >
+
+                    <button
+                        class="dropdown-option active-language"
+                        type="button"
+                        data-language="en"
+                    >
+                        English
+                    </button>
+
+                    <button
+                        class="dropdown-option"
+                        type="button"
+                        data-language="bn"
+                    >
+                        বাংলা
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="header-menu-wrapper">
+
+                <button
+                    class="profile-button"
+                    id="profileButton"
+                    type="button"
+                    aria-label="Open Profile Menu"
+                >
+
+                    <i data-lucide="user"></i>
+
+                </button>
+
+
+                <div
+                    class="header-dropdown profile-dropdown"
+                    id="profileMenu"
+                >
+
+                    <a href="#">
+                        <i data-lucide="user-round"></i>
+                        My Profile
+                    </a>
+
+                    <a href="#">
+                        <i data-lucide="ticket"></i>
+                        My Tickets
+                    </a>
+
+                    <a href="#">
+                        <i data-lucide="history"></i>
+                        Reservation History
+                    </a>
+
+                    <div class="dropdown-divider"></div>
+
+                    <button
+                        class="logout-option"
+                        id="logoutButton"
+                        type="button"
+                    >
+
+                        <i data-lucide="log-out"></i>
+
+                        Logout
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<main>
+
+
+<section class="home-hero">
+
+    <div class="hero-pattern"></div>
+
+
+    <div class="home-hero-container">
+
+
+
+        <div class="home-hero-copy">
+
+            <div class="hero-eyebrow">
+
+                <span class="eyebrow-line"></span>
+
+                <span>
+                    Smarter travel starts here
+                </span>
+
+            </div>
+
+
+            <h1>
+
+                Bus
+
+                <span>
+                    Lagbe?
+                </span>
+
+            </h1>
+
+
+            <h2>
+
+                Your seat. Your route.
+
+                <br>
+
+                Reserved before you leave.
+
+            </h2>
+
+
+            <p class="home-hero-description">
+
+                Find buses, compare fares and reserve your
+                journey before reaching the stop.
+
+            </p>
+
+
+            <div class="hero-actions">
+
+                <button
+                    class="reserve-seat-btn"
+                    id="heroBookButton"
+                    type="button"
+                >
+
+                    Reserve Your Seat
+
+                    <i data-lucide="arrow-right"></i>
+
+                </button>
+
+            </div>
+
+
+            <div class="hero-trust">
+
+                <div class="trust-item">
+
+                    <i data-lucide="shield-check"></i>
+
+                    <span>
+                        Secure
+                    </span>
+
+                </div>
+
+
+                <span class="trust-dot"></span>
+
+
+                <div class="trust-item">
+
+                    <i data-lucide="mouse-pointer-click"></i>
+
+                    <span>
+                        Simple
+                    </span>
+
+                </div>
+
+
+                <span class="trust-dot"></span>
+
+
+                <div class="trust-item">
+
+                    <i data-lucide="smartphone"></i>
+
+                    <span>
+                        Digital
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+        <div class="route-animation-area">
+
+
+            <!-- MAP GLOW -->
+
+            <div class="map-glow"></div>
+
+
+            <!-- MAP SCENE -->
+
+            <div
+                class="map-scene"
+                id="mapScene"
+            >
+
+
+                <div
+                    class="map-plane"
+                    id="mapPlane"
+                >
+
+
+                    <!-- MAP BACKGROUND -->
+
+                    <div class="map-background">
+
+
+                        <!-- FAKE MAP ROADS -->
+
+                        <span class="map-road road-one"></span>
+
+                        <span class="map-road road-two"></span>
+
+                        <span class="map-road road-three"></span>
+
+                        <span class="map-road road-four"></span>
+
+                        <span class="map-road road-five"></span>
+
+                        <span class="map-road road-six"></span>
+
+
+                        <!-- AREA LABELS -->
+
+                        <span class="map-area-label airport-label">
+                            Airport
+                        </span>
+
+                        <span class="map-area-label banani-label">
+                            Banani
+                        </span>
+
+                        <span class="map-area-label mohakhali-label">
+                            Mohakhali
+                        </span>
+
+                        <span class="map-area-label agargaon-label">
+                            Agargaon
+                        </span>
+
+
+                    </div>
+
+
+
+
+                    <svg
+                        class="route-svg"
+                        viewBox="0 0 600 600"
+                        preserveAspectRatio="none"
+                        aria-hidden="true"
+                    >
+
+
+                        <!-- ROUTE SHADOW -->
+
+                        <path
+                            class="route-shadow"
+                            d="
+                            M 440 105
+                            C 400 135, 390 170, 365 205
+                            C 335 245, 305 255, 290 300
+                            C 275 345, 245 370, 205 405
+                            C 175 430, 155 465, 135 510
+                            "
+                        ></path>
+
+
+                        <!-- MAIN ROUTE -->
+
+                        <path
+                            id="routePath"
+                            class="route-path"
+                            d="
+                            M 440 105
+                            C 400 135, 390 170, 365 205
+                            C 335 245, 305 255, 290 300
+                            C 275 345, 245 370, 205 405
+                            C 175 430, 155 465, 135 510
+                            "
+                        ></path>
+
+
+                    </svg>
+
+
+
+                    <div class="map-location uttara-location">
+
+                        <div class="location-pulse"></div>
+
+                        <div class="location-pin">
+
+                            <i data-lucide="map-pin"></i>
+
+                        </div>
+
+                        <span>
+                            Uttara
+                        </span>
+
+                    </div>
+
+
+                    <div class="map-location mirpur-location">
+
+                        <div class="location-pulse"></div>
+
+                        <div class="location-pin">
+
+                            <i data-lucide="map-pin"></i>
+
+                        </div>
+
+                        <span>
+                            Mirpur
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="moving-bus"
+                        id="movingBus"
+                    >
+
+                        <i data-lucide="bus-front"></i>
+
+                    </div>
+
+
+                </div>
+
+
+                <div
+                    class="phone-frame"
+                    id="phoneFrame"
+                >
+
+                    <div class="phone-speaker"></div>
+
+                    <div class="phone-camera"></div>
+
+                </div>
+
+
+
+                <div
+                    class="route-result-card"
+                    id="routeResultCard"
+                >
+
+                    <div class="route-card-header">
+
+                        <div>
+
+                            <span class="route-card-label">
+                                Your Route
+                            </span>
+
+                            <h3>
+                                Uttara
+                                <i data-lucide="arrow-right"></i>
+                                Mirpur
+                            </h3>
+
+                        </div>
+
+
+                        <div class="route-status">
+
+                            <span></span>
+
+                            Live
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="route-card-stats">
+
+
+                        <div>
+
+                            <strong>
+                                6
+                            </strong>
+
+                            <span>
+                                Buses Found
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                ৳35
+                            </strong>
+
+                            <span>
+                                Starting Fare
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <button
+                        class="find-bus-btn"
+                        id="findBusButton"
+                        type="button"
+                    >
+
+                        Find My Bus
+
+                        <i data-lucide="arrow-up-right"></i>
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="problem-section">
+
+    <div class="section-container">
+
+        <div class="problem-heading">
+
+            <span class="section-label">
+                Sounds familiar?
+            </span>
+
+            <h2>
+                Bus Lagbe?
+            </h2>
+
+            <p>
+                Ever left your bag on a seat just to reserve your place?
+            </p>
+
+        </div>
+
+
+        <div class="problem-grid">
+
+
+            <article class="problem-card">
+
+                <div class="problem-icon">
+
+                    <i data-lucide="briefcase-business"></i>
+
+                </div>
+
+                <h3>
+                    Saving seats with bags
+                </h3>
+
+                <p>
+                    Leaving belongings behind just to keep
+                    a seat reserved.
+                </p>
+
+            </article>
+
+
+            <article class="problem-card">
+
+                <div class="problem-icon">
+
+                    <i data-lucide="phone-call"></i>
+
+                </div>
+
+                <h3>
+                    Calling friends
+                </h3>
+
+                <p>
+                    Asking someone already there to hold
+                    a seat for you.
+                </p>
+
+            </article>
+
+
+            <article class="problem-card">
+
+                <div class="problem-icon">
+
+                    <i data-lucide="person-standing"></i>
+
+                </div>
+
+                <h3>
+                    Rushing to the stop
+                </h3>
+
+                <p>
+                    Arriving early and hoping the bus
+                    has not filled up.
+                </p>
+
+            </article>
+
+
+            <article class="problem-card">
+
+                <div class="problem-icon">
+
+                    <i data-lucide="bus"></i>
+
+                </div>
+
+                <h3>
+                    Standing the whole way
+                </h3>
+
+                <p>
+                    Travelling without a seat because
+                    you arrived too late.
+                </p>
+
+            </article>
+
+
+        </div>
+
+
+        <div class="problem-solution">
+
+            <span>
+                So we built something simpler.
+            </span>
+
+            <h2>
+                We fixed that.
+            </h2>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="how-it-works">
+
+    <div class="section-container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                Three simple steps
+            </span>
+
+            <h2>
+                Reservation made simple.
+            </h2>
+
+            <p>
+                From searching your route to receiving your
+                ticket, Bus Lagbe keeps the journey simple.
+            </p>
+
+        </div>
+
+
+        <div class="steps-grid">
+
+
+            <article class="step-card">
+
+                <span class="step-number">
+                    01
+                </span>
+
+                <div class="step-icon">
+
+                    <i data-lucide="map-pin"></i>
+
+                </div>
+
+                <h3>
+                    Find Your Bus
+                </h3>
+
+                <p>
+                    Select your pickup location and destination.
+                </p>
+
+            </article>
+
+
+
+            <div class="step-connector">
+
+                <i data-lucide="arrow-right"></i>
+
+            </div>
+
+
+
+            <article class="step-card">
+
+                <span class="step-number">
+                    02
+                </span>
+
+                <div class="step-icon">
+
+                    <i data-lucide="list-filter"></i>
+
+                </div>
+
+                <h3>
+                    Compare Your Ride
+                </h3>
+
+                <p>
+                    Compare matched buses, arrival times and fares.
+                </p>
+
+            </article>
+
+
+
+            <div class="step-connector">
+
+                <i data-lucide="arrow-right"></i>
+
+            </div>
+
+
+
+            <article class="step-card">
+
+                <span class="step-number">
+                    03
+                </span>
+
+                <div class="step-icon">
+
+                    <i data-lucide="ticket-check"></i>
+
+                </div>
+
+                <h3>
+                    Reserve Your Seat
+                </h3>
+
+                <p>
+                    Choose your seats, pay digitally and receive
+                    one reservation ticket.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="operators-section">
+
+    <div class="section-container">
+
+
+        <div class="operators-content">
+
+            <div class="operators-copy">
+
+                <span class="section-label">
+                    Made for local journeys
+                </span>
+
+                <h2>
+                    Built for Bangladesh's transport network.
+                </h2>
+
+                <p>
+                    Search routes across bus services used by
+                    commuters throughout Bangladesh.
+                </p>
+
+            </div>
+
+
+            <div
+                class="operator-cloud"
+                id="operatorCloud"
+            >
+
+                <span class="operator-pill large">
+                    Shohag
+                </span>
+
+                <span class="operator-pill">
+                    ENA
+                </span>
+
+                <span class="operator-pill medium">
+                    BRTC
+                </span>
+
+                <span class="operator-pill large">
+                    Victor Classic
+                </span>
+
+                <span class="operator-pill medium">
+                    Butterfly Poribohon
+                </span>
+
+                <span class="operator-pill">
+                    Turag Poribohon
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="features-section">
+
+    <div class="section-container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                Built around your journey
+            </span>
+
+            <h2>
+                Everything you need.
+                <br>
+                Nothing you don't.
+            </h2>
+
+        </div>
+
+
+        <div class="home-features-grid">
+
+
+            <article class="home-feature-card">
+
+                <div class="home-feature-icon">
+
+                    <i data-lucide="search"></i>
+
+                </div>
+
+                <h3>
+                    Compare Buses
+                </h3>
+
+                <p>
+                    See route-matched buses and compare your
+                    available options.
+                </p>
+
+            </article>
+
+
+            <article class="home-feature-card">
+
+                <div class="home-feature-icon">
+
+                    <i data-lucide="wallet-cards"></i>
+
+                </div>
+
+                <h3>
+                    Digital Payments
+                </h3>
+
+                <p>
+                    Pay digitally using supported mobile
+                    financial services.
+                </p>
+
+            </article>
+
+
+            <article class="home-feature-card">
+
+                <div class="home-feature-icon">
+
+                    <i data-lucide="ticket"></i>
+
+                </div>
+
+                <h3>
+                    Instant Tickets
+                </h3>
+
+                <p>
+                    Download or print your ticket after a
+                    successful reservation.
+                </p>
+
+            </article>
+
+
+            <article class="home-feature-card">
+
+                <div class="home-feature-icon">
+
+                    <i data-lucide="armchair"></i>
+
+                </div>
+
+                <h3>
+                    Multi-Seat Reservation
+                </h3>
+
+                <p>
+                    Reserve multiple seats under one simple
+                    reservation ticket.
+                </p>
+
+            </article>
+
+
+            <article class="home-feature-card">
+
+                <div class="home-feature-icon">
+
+                    <i data-lucide="shield-check"></i>
+
+                </div>
+
+                <h3>
+                    Digital Reservation
+                </h3>
+
+                <p>
+                    Keep your tickets and reservation records
+                    available from your profile.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="final-cta">
+
+    <div class="cta-road-pattern"></div>
+
+
+    <div class="final-cta-content">
+
+        <span class="cta-label">
+            Your journey starts here
+        </span>
+
+        <h2>
+            Ready to go?
+        </h2>
+
+        <p>
+            Your next seat is only a few clicks away.
+        </p>
+
+        <button
+            class="cta-book-btn"
+            id="ctaBookButton"
+            type="button"
+        >
+
+            Book Now
+
+            <i data-lucide="arrow-right"></i>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<footer class="home-footer">
+
+    <div class="footer-container">
+
+
+        <div class="footer-brand">
+
+            <div class="footer-brand-heading">
+
+                <img
+                    src="bd-logo.png"
+                    alt="Bus Lagbe Logo"
+                >
+
+                <span>
+                    Bus Lagbe?
+                </span>
+
+            </div>
+
+            <p>
+                A smarter way to reserve your journey.
+            </p>
+
+        </div>
+
+
+        <div class="footer-project">
+
+            <span>
+                Developed by
+            </span>
+
+            <strong>
+                Najah Sadmim
+            </strong>
+
+            <span>
+                BRAC University
+            </span>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a
+                href="https://github.com/najahsadmim"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <i data-lucide="github"></i>
+
+                GitHub
+
+            </a>
+
+
+            <a
+                href="https://www.linkedin.com/in/najahsadmim/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <i data-lucide="linkedin"></i>
+
+                LinkedIn
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Bus Lagbe?
+        </span>
+
+        <span>
+            Bus Reservation System for Bangladesh
+        </span>
+
+    </div>
+
+</footer>
+
+
+
+<script>
+
+    lucide.createIcons();
+
+</script>
+
+
+<script src="home.js"></script>
+
+
+</body>
+
+</html>
