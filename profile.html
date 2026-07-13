@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Profile | Bus Lagbe?</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="profile.css">
+
+</head>
+
+<body>
+
+<header class="profile-header">
+
+    <div class="profile-header-container">
+
+        <a href="home.html" class="profile-brand">
+
+            <img src="bd-logo.png" alt="Bangladesh Logo">
+
+            <span>Bus Lagbe?</span>
+
+        </a>
+
+
+        <div class="profile-header-actions">
+
+            <a
+                href="booking.html"
+                class="book-again-button"
+            >
+
+                <i data-lucide="plus"></i>
+
+                Book
+
+            </a>
+
+
+            <div class="notification-wrapper">
+
+                <button
+                    class="profile-icon-button"
+                    id="notificationButton"
+                    type="button"
+                >
+
+                    <i data-lucide="bell"></i>
+
+                    <span
+                        class="notification-badge hidden"
+                        id="notificationBadge"
+                    >
+                        0
+                    </span>
+
+                </button>
+
+
+                <div
+                    class="notification-panel"
+                    id="notificationPanel"
+                >
+
+                    <div class="notification-header">
+
+                        <div>
+
+                            <span>UPDATES</span>
+
+                            <h3>Notifications</h3>
+
+                        </div>
+
+                        <button
+                            id="markAllReadButton"
+                            type="button"
+                        >
+                            Mark all read
+                        </button>
+
+                    </div>
+
+                    <div
+                        class="notification-list"
+                        id="notificationList"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="home.html"
+                class="profile-icon-button"
+            >
+
+                <i data-lucide="house"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <section class="profile-hero">
+
+        <div class="profile-hero-pattern"></div>
+
+        <div class="profile-container profile-hero-content">
+
+            <span>
+                MY ACCOUNT
+            </span>
+
+            <h1>
+                Your journey,
+                <br>
+                your profile.
+            </h1>
+
+        </div>
+
+    </section>
+
+
+    <section class="profile-content-section">
+
+        <div class="profile-container">
+
+            <div class="profile-layout">
+
+                <aside class="profile-sidebar">
+
+                    <div class="profile-avatar-wrapper">
+
+                        <div class="profile-avatar">
+
+                            <img
+                                id="profileImage"
+                                class="hidden"
+                                alt="Profile"
+                            >
+
+                            <i
+                                data-lucide="user"
+                                id="profileAvatarIcon"
+                            ></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <h2 id="sidebarName">
+                        Passenger
+                    </h2>
+
+                    <p id="sidebarIdentity">
+                        Bus Lagbe Account
+                    </p>
+
+
+                    <div class="profile-sidebar-divider"></div>
+
+
+                    <nav class="profile-navigation">
+
+                        <button
+                            class="profile-nav-item active"
+                            data-section="personal"
+                            type="button"
+                        >
+
+                            <i data-lucide="user-round"></i>
+
+                            Personal Information
+
+                        </button>
+
+
+                        <a
+                            href="tickets.html"
+                            class="profile-nav-item"
+                        >
+
+                            <i data-lucide="ticket"></i>
+
+                            My Tickets
+
+                        </a>
+
+
+                        <a
+                            href="history.html"
+                            class="profile-nav-item"
+                        >
+
+                            <i data-lucide="history"></i>
+
+                            Reservation History
+
+                        </a>
+
+                    </nav>
+
+
+                    <div class="profile-sidebar-divider"></div>
+
+
+                    <button
+                        class="profile-logout"
+                        id="profileLogoutButton"
+                        type="button"
+                    >
+
+                        <i data-lucide="log-out"></i>
+
+                        Logout
+
+                    </button>
+
+                </aside>
+
+
+                <section class="profile-details-card">
+
+                    <div class="profile-details-heading">
+
+                        <div>
+
+                            <span>
+                                PERSONAL DETAILS
+                            </span>
+
+                            <h2>
+                                Account information
+                            </h2>
+
+                            <p>
+                                Keep your passenger information
+                                accurate and up to date.
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            class="edit-profile-button"
+                            id="editProfileButton"
+                            type="button"
+                        >
+
+                            <i data-lucide="pencil"></i>
+
+                            Edit Profile
+
+                        </button>
+
+                    </div>
+
+
+                    <form id="profileForm">
+
+                        <div class="profile-form-grid">
+
+                            <div class="profile-input-group">
+
+                                <label for="profileName">
+                                    Full Name
+                                </label>
+
+                                <div>
+
+                                    <i data-lucide="user"></i>
+
+                                    <input
+                                        id="profileName"
+                                        type="text"
+                                        placeholder="Enter your name"
+                                        disabled
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="profile-input-group">
+
+                                <label for="profilePhone">
+                                    Phone Number
+                                </label>
+
+                                <div>
+
+                                    <i data-lucide="phone"></i>
+
+                                    <input
+                                        id="profilePhone"
+                                        type="tel"
+                                        placeholder="+880 1XXXXXXXXX"
+                                        disabled
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="profile-input-group">
+
+                                <label for="profileEmail">
+                                    Email Address
+                                </label>
+
+                                <div>
+
+                                    <i data-lucide="mail"></i>
+
+                                    <input
+                                        id="profileEmail"
+                                        type="email"
+                                        placeholder="Email address"
+                                        disabled
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="profile-input-group">
+
+                                <label for="profileCity">
+                                    City
+                                </label>
+
+                                <div>
+
+                                    <i data-lucide="map-pin"></i>
+
+                                    <input
+                                        id="profileCity"
+                                        type="text"
+                                        placeholder="Dhaka"
+                                        disabled
+                                    >
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="profile-form-actions hidden"
+                            id="profileFormActions"
+                        >
+
+                            <button
+                                class="cancel-profile-button"
+                                id="cancelProfileButton"
+                                type="button"
+                            >
+                                Cancel
+                            </button>
+
+                            <button
+                                class="save-profile-button"
+                                type="submit"
+                            >
+
+                                <i data-lucide="check"></i>
+
+                                Save Changes
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+
+                    <div
+                        class="profile-success hidden"
+                        id="profileSuccess"
+                    >
+
+                        <i data-lucide="check-circle-2"></i>
+
+                        Profile updated successfully.
+
+                    </div>
+
+
+                    <div class="account-overview">
+
+                        <div class="account-overview-heading">
+
+                            <span>
+                                JOURNEY OVERVIEW
+                            </span>
+
+                            <h3>
+                                Your Bus Lagbe activity
+                            </h3>
+
+                        </div>
+
+
+                        <div class="account-stats">
+
+                            <div>
+
+                                <i data-lucide="ticket-check"></i>
+
+                                <span>
+                                    Reservations
+                                </span>
+
+                                <strong id="profileReservations">
+                                    0
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <i data-lucide="armchair"></i>
+
+                                <span>
+                                    Seats Reserved
+                                </span>
+
+                                <strong id="profileSeats">
+                                    0
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <i data-lucide="wallet-cards"></i>
+
+                                <span>
+                                    Total Spent
+                                </span>
+
+                                <strong>
+                                    ৳<span id="profileSpent">0</span>
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="profile-footer">
+
+    <div class="profile-footer-container">
+
+        <span>
+            Developed by
+            <strong>Najah Sadmim</strong>
+        </span>
+
+        <span>
+            BRAC University
+        </span>
+
+        <div>
+
+            <a
+                href="https://github.com/najahsadmim"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GitHub
+            </a>
+
+            <a
+                href="https://www.linkedin.com/in/najahsadmim/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                LinkedIn
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="notifications.js"></script>
+
+<script src="profile.js"></script>
+
+</body>
+
+</html>
