@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Reserve Your Seat | Bus Lagbe?</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="booking.css">
+
+</head>
+
+
+<body>
+
+
+<header class="main-header">
+
+    <div class="header-container">
+
+
+        <a
+            href="home.html"
+            class="brand"
+        >
+
+            <img
+                src="bd-logo.png"
+                class="brand-logo"
+                alt="Bus Lagbe Bangladesh Logo"
+            >
+
+            <span class="brand-name">
+                Bus Lagbe?
+            </span>
+
+        </a>
+
+
+        <div class="header-actions">
+
+
+            <button
+                class="header-book-btn active-book-button"
+                id="headerBookButton"
+                type="button"
+                data-i18n="bookNow"
+            >
+
+                <span data-i18n="bookNow">
+                    Book Now
+                </span>
+
+                <i data-lucide="arrow-right"></i>
+
+            </button>
+
+
+            <div class="notification-wrapper">
+
+                <button
+                    class="header-icon-btn notification-button"
+                    id="notificationButton"
+                    type="button"
+                    aria-label="Notifications"
+                >
+
+                    <i data-lucide="bell"></i>
+
+                    <span
+                        class="notification-dot"
+                        id="notificationDot"
+                    ></span>
+
+                </button>
+
+
+                <div
+                    class="notification-panel"
+                    id="notificationPanel"
+                >
+
+                    <div class="notification-header">
+
+                        <h3 data-i18n="notifications">
+                            Notifications
+                        </h3>
+
+                        <button
+                            id="markAllReadButton"
+                            type="button"
+                            data-i18n="markAllRead"
+                        >
+                            Mark all read
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        class="notification-list"
+                        id="notificationList"
+                    >
+
+                        <div class="empty-notifications">
+
+                            <i data-lucide="bell-off"></i>
+
+                            <p data-i18n="noNotifications">
+                                No notifications yet.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="header-menu-wrapper">
+
+                <button
+                    class="header-icon-btn"
+                    id="languageButton"
+                    type="button"
+                    aria-label="Change Language"
+                >
+
+                    <i data-lucide="languages"></i>
+
+                </button>
+
+
+                <div
+                    class="header-dropdown"
+                    id="languageMenu"
+                >
+
+                    <button
+                        class="dropdown-option active-language"
+                        type="button"
+                        data-language="en"
+                    >
+                        English
+                    </button>
+
+                    <button
+                        class="dropdown-option"
+                        type="button"
+                        data-language="bn"
+                    >
+                        বাংলা
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="header-menu-wrapper">
+
+                <button
+                    class="profile-button"
+                    id="profileButton"
+                    type="button"
+                    aria-label="Open Profile Menu"
+                >
+
+                    <img
+                        id="headerProfileImage"
+                        class="header-profile-image hidden"
+                        src=""
+                        alt="Profile"
+                    >
+
+                    <i
+                        data-lucide="user"
+                        id="headerProfileIcon"
+                    ></i>
+
+                </button>
+
+
+                <div
+                    class="header-dropdown profile-dropdown"
+                    id="profileMenu"
+                >
+
+                    <div class="profile-menu-user">
+
+                        <div class="profile-menu-avatar">
+
+                            <img
+                                id="profileMenuImage"
+                                class="hidden"
+                                src=""
+                                alt="Profile"
+                            >
+
+                            <i
+                                data-lucide="user"
+                                id="profileMenuIcon"
+                            ></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong id="profileMenuName">
+                                Passenger
+                            </strong>
+
+                            <span id="profileMenuIdentity">
+                                Bus Lagbe Account
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dropdown-divider"></div>
+
+
+                    <a href="profile.html">
+
+                        <i data-lucide="user-round"></i>
+
+                        <span data-i18n="myProfile">
+                            My Profile
+                        </span>
+
+                    </a>
+
+
+                    <a href="tickets.html">
+
+                        <i data-lucide="ticket"></i>
+
+                        <span data-i18n="myTickets">
+                            My Tickets
+                        </span>
+
+                    </a>
+
+
+                    <a href="history.html">
+
+                        <i data-lucide="history"></i>
+
+                        <span data-i18n="reservationHistory">
+                            Reservation History
+                        </span>
+
+                    </a>
+
+
+                    <div class="dropdown-divider"></div>
+
+
+                    <button
+                        class="logout-option"
+                        id="logoutButton"
+                        type="button"
+                    >
+
+                        <i data-lucide="log-out"></i>
+
+                        <span data-i18n="logout">
+                            Logout
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<main class="booking-main">
+
+
+    <section class="booking-hero">
+
+
+        <div class="booking-hero-pattern"></div>
+
+
+        <div class="booking-hero-content">
+
+
+            <div class="booking-eyebrow">
+
+                <span class="eyebrow-line"></span>
+
+                <span data-i18n="findYourJourney">
+                    Find your journey
+                </span>
+
+            </div>
+
+
+            <h1 data-i18n="whereHeading">
+                Where are you heading?
+            </h1>
+
+
+            <p data-i18n="whereDescription">
+
+                Find buses that match your pickup location
+                and destination.
+
+            </p>
+
+
+        </div>
+
+    </section>
+
+
+
+    <section class="route-search-section">
+
+
+        <div class="booking-container">
+
+
+            <div class="route-search-card">
+
+
+                <div class="search-field">
+
+
+                    <label
+                        for="pickupLocation"
+                        data-i18n="pickupLocation"
+                    >
+                        Pickup Location
+                    </label>
+
+
+                    <div class="select-wrapper">
+
+
+                        <div class="select-icon pickup-icon">
+
+                            <i data-lucide="map-pin"></i>
+
+                        </div>
+
+
+                        <select id="pickupLocation">
+
+                            <option
+                                value=""
+                                data-i18n="selectPickup"
+                            >
+                                Select pickup
+                            </option>
+
+                        </select>
+
+
+                        <i
+                            data-lucide="chevron-down"
+                            class="select-chevron"
+                        ></i>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="route-direction">
+
+
+                    <span></span>
+
+                    <div>
+
+                        <i data-lucide="arrow-right"></i>
+
+                    </div>
+
+                    <span></span>
+
+
+                </div>
+
+
+
+                <div class="search-field">
+
+
+                    <label
+                        for="destinationLocation"
+                        data-i18n="destination"
+                    >
+                        Destination
+                    </label>
+
+
+                    <div class="select-wrapper">
+
+
+                        <div class="select-icon destination-icon">
+
+                            <i data-lucide="flag"></i>
+
+                        </div>
+
+
+                        <select
+                            id="destinationLocation"
+                            disabled
+                        >
+
+                            <option
+                                value=""
+                                data-i18n="selectDestination"
+                            >
+                                Select destination
+                            </option>
+
+                        </select>
+
+
+                        <i
+                            data-lucide="chevron-down"
+                            class="select-chevron"
+                        ></i>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <button
+                    class="find-buses-button"
+                    id="findBusesButton"
+                    type="button"
+                    disabled
+                >
+
+                    <span data-i18n="findAvailableBuses">
+                        Find Available Buses
+                    </span>
+
+                    <i data-lucide="arrow-right"></i>
+
+                </button>
+
+
+            </div>
+
+
+            <div
+                class="search-helper"
+                id="searchHelper"
+            >
+
+                <i data-lucide="route"></i>
+
+                <span data-i18n="routeMatchHelper">
+                    We match your journey with bus pickups, stops and drop-offs.
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <section
+        class="bus-results-section hidden"
+        id="busResultsSection"
+    >
+
+
+        <div class="booking-container">
+
+
+            <div class="results-heading">
+
+
+                <div>
+
+
+                    <span
+                        class="results-label"
+                        data-i18n="availableJourneys"
+                    >
+                        Available journeys
+                    </span>
+
+
+                    <h2>
+
+                        <span id="resultsPickup">
+                            Uttara
+                        </span>
+
+                        <i data-lucide="arrow-right"></i>
+
+                        <span id="resultsDestination">
+                            Mirpur
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+
+                        <strong id="resultCount">
+                            0
+                        </strong>
+
+                        <span data-i18n="busesMatchJourney">
+                            buses match your journey
+                        </span>
+
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="results-sort">
+
+
+                    <span data-i18n="sortBy">
+                        Sort by
+                    </span>
+
+
+                    <button
+                        class="sort-button active-sort"
+                        type="button"
+                        data-sort="fare"
+                    >
+
+                        <i data-lucide="badge-dollar-sign"></i>
+
+                        <span data-i18n="fare">
+                            Fare
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="sort-button"
+                        type="button"
+                        data-sort="time"
+                    >
+
+                        <i data-lucide="clock-3"></i>
+
+                        <span data-i18n="arrivalTime">
+                            Arrival Time
+                        </span>
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div
+                class="bus-results-list"
+                id="busResultsList"
+            ></div>
+
+
+
+            <div
+                class="no-results-state hidden"
+                id="noResultsState"
+            >
+
+
+                <div class="no-results-icon">
+
+                    <i data-lucide="bus-front"></i>
+
+                </div>
+
+
+                <h3 data-i18n="noMatchingBuses">
+                    No matching buses found.
+                </h3>
+
+
+                <p data-i18n="tryDifferentRoute">
+
+                    Try selecting a different pickup location
+                    or destination.
+
+                </p>
+
+
+                <button
+                    id="searchAgainButton"
+                    type="button"
+                    data-i18n="searchAgain"
+                >
+                    Search Again
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<div
+    class="reservation-overlay hidden"
+    id="reservationOverlay"
+></div>
+
+
+
+<aside
+    class="reservation-panel"
+    id="reservationPanel"
+>
+
+
+    <div class="reservation-panel-header">
+
+
+        <div>
+
+
+            <span data-i18n="yourReservation">
+                Your Reservation
+            </span>
+
+
+            <h2 data-i18n="reserveYourSeat">
+                Reserve Your Seat
+            </h2>
+
+
+        </div>
+
+
+        <button
+            class="close-panel-button"
+            id="closeReservationPanel"
+            type="button"
+            aria-label="Close reservation"
+        >
+
+            <i data-lucide="x"></i>
+
+        </button>
+
+
+    </div>
+
+
+
+    <div class="selected-bus-summary">
+
+
+        <div class="selected-bus-heading">
+
+
+            <div class="selected-bus-icon">
+
+                <i data-lucide="bus-front"></i>
+
+            </div>
+
+
+            <div>
+
+                <h3 id="selectedBusOperator">
+                    Victor Classic
+                </h3>
+
+                <span id="selectedBusRegistration">
+                    Dhaka Metro B 15-3842
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="selected-route">
+
+
+            <div>
+
+                <span data-i18n="from">
+                    From
+                </span>
+
+                <strong id="selectedPickup">
+                    Uttara
+                </strong>
+
+            </div>
+
+
+            <div class="selected-route-line">
+
+                <span></span>
+
+                <i data-lucide="bus"></i>
+
+                <span></span>
+
+            </div>
+
+
+            <div class="destination-text">
+
+                <span data-i18n="to">
+                    To
+                </span>
+
+                <strong id="selectedDestination">
+                    Mirpur
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="seat-selection">
+
+
+        <span
+            class="seat-selection-label"
+            data-i18n="howManySeats"
+        >
+            How many seats?
+        </span>
+
+
+        <div class="seat-counter">
+
+
+            <button
+                id="decreaseSeatsButton"
+                type="button"
+                aria-label="Decrease seats"
+            >
+
+                <i data-lucide="minus"></i>
+
+            </button>
+
+
+            <div class="seat-count-display">
+
+                <strong id="seatCount">
+                    01
+                </strong>
+
+                <span data-i18n="seats">
+                    Seats
+                </span>
+
+            </div>
+
+
+            <button
+                id="increaseSeatsButton"
+                type="button"
+                aria-label="Increase seats"
+            >
+
+                <i data-lucide="plus"></i>
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="fare-breakdown">
+
+
+        <div class="fare-row">
+
+            <span data-i18n="farePerSeat">
+                Fare per seat
+            </span>
+
+            <strong>
+
+                ৳<span id="farePerSeat">
+                    35
+                </span>
+
+            </strong>
+
+        </div>
+
+
+        <div class="fare-row">
+
+            <span data-i18n="selectedSeats">
+                Selected seats
+            </span>
+
+            <strong id="selectedSeatCount">
+                1
+            </strong>
+
+        </div>
+
+
+        <div class="fare-divider"></div>
+
+
+        <div class="fare-row total-fare-row">
+
+            <span data-i18n="total">
+                Total
+            </span>
+
+            <strong>
+
+                ৳<span id="totalFare">
+                    35
+                </span>
+
+            </strong>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="reservation-note">
+
+
+        <i data-lucide="ticket-check"></i>
+
+
+        <p data-i18n="oneTicketNote">
+
+            One ticket will be generated for this reservation,
+            regardless of the number of seats booked.
+
+        </p>
+
+
+    </div>
+
+
+
+    <button
+        class="confirm-reservation-button"
+        id="confirmReservationButton"
+        type="button"
+    >
+
+        <span data-i18n="confirmReservation">
+            Confirm Reservation
+        </span>
+
+        <i data-lucide="arrow-right"></i>
+
+    </button>
+
+
+</aside>
+
+
+
+<template id="busCardTemplate">
+
+
+    <article class="bus-result-card">
+
+
+        <div class="bus-card-top">
+
+
+            <div class="bus-operator-info">
+
+
+                <div class="bus-result-icon">
+
+                    <i data-lucide="bus-front"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h3 class="bus-operator-name"></h3>
+
+                    <span class="bus-registration"></span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="availability-badge">
+
+                <span></span>
+
+                <strong data-i18n="available">
+                    Available
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="bus-route-visual">
+
+
+            <div class="route-time-block">
+
+                <strong class="pickup-time"></strong>
+
+                <span class="card-pickup-location"></span>
+
+            </div>
+
+
+            <div class="bus-route-track">
+
+
+                <span class="route-track-point"></span>
+
+                <div class="route-track-line">
+
+                    <i data-lucide="bus"></i>
+
+                </div>
+
+                <span class="route-track-point destination-point"></span>
+
+
+            </div>
+
+
+            <div class="route-time-block destination-time-block">
+
+                <strong class="destination-time"></strong>
+
+                <span class="card-destination-location"></span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="bus-card-bottom">
+
+
+            <div class="bus-fare">
+
+
+                <span data-i18n="farePerSeat">
+                    Fare per seat
+                </span>
+
+
+                <strong>
+
+                    ৳<span class="bus-fare-value"></span>
+
+                </strong>
+
+
+            </div>
+
+
+
+            <div class="bus-card-actions">
+
+
+                <button
+                    class="view-route-button"
+                    type="button"
+                >
+
+                    <i data-lucide="route"></i>
+
+                    <span data-i18n="viewRoute">
+                        View Route
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="book-bus-button"
+                    type="button"
+                >
+
+                    <span data-i18n="book">
+                        Book
+                    </span>
+
+                    <i data-lucide="arrow-right"></i>
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="expanded-route hidden">
+
+
+            <div class="expanded-route-heading">
+
+
+                <span data-i18n="routeStops">
+                    Route Stops
+                </span>
+
+
+                <button
+                    class="close-route-button"
+                    type="button"
+                    aria-label="Close route"
+                >
+
+                    <i data-lucide="chevron-up"></i>
+
+                </button>
+
+
+            </div>
+
+
+            <div class="route-stops-list"></div>
+
+
+        </div>
+
+
+    </article>
+
+
+</template>
+
+
+
+<footer class="booking-footer">
+
+
+    <div class="booking-footer-container">
+
+
+        <div>
+
+            <strong>
+                Bus Lagbe?
+            </strong>
+
+            <span data-i18n="smarterJourney">
+                A smarter way to reserve your journey.
+            </span>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                Developed by Najah Sadmim
+            </span>
+
+            <span>
+                BRAC University
+            </span>
+
+        </div>
+
+
+        <div class="booking-footer-links">
+
+
+            <a
+                href="https://github.com/najahsadmim"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <i data-lucide="github"></i>
+
+                GitHub
+
+            </a>
+
+
+            <a
+                href="https://www.linkedin.com/in/najahsadmim/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <i data-lucide="linkedin"></i>
+
+                LinkedIn
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+
+</footer>
+
+
+
+<script>
+    lucide.createIcons();
+</script>
+
+<script type="module" src="booking.js"></script>
+
+
+</body>
+
+</html>
